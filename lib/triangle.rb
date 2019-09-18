@@ -17,17 +17,17 @@ class Triangle
       end
       kind
     else
-      begin
+      # begin
         raise TriangleError
-      rescue TriangleError => error
-          puts error.side_length_error
-      end
+      # rescue TriangleError => error
+      #     puts error.side_length_error
+      # end
     end
   end
   
   class TriangleError < StandardError
-    def side_length_error
-      puts "Your triangle must have a positive length on each side."
-    end
+    # def side_length_error
+    #   puts "Your triangle must have a positive length on each side."
+    # end
   end
 end
