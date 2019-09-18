@@ -6,7 +6,7 @@ class Triangle
     @b = b
     @c = c
   end
-  def self.kind 
+  def kind 
     if @a == @b && @a == @c
       kind = :equilateral
     elsif @a1 > @b
