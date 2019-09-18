@@ -16,7 +16,7 @@ class Triangle
         kind = :scalene
       end
       kind
-    elsif (@a + @b !> @c) || (@a + @c !> @b) || (@b + @c !> @a)
+    elsif (@a + @b !> @c) || (@a + @c !> @b) || (@b + @c >! @a)
       # begin
         raise TriangleError
       # rescue TriangleError => error
