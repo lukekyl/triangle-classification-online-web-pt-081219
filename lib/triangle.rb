@@ -8,7 +8,6 @@ class Triangle
   end
   def kind 
     if (@a != 0 && @a > 0) || (@b != 0 && @b > 0) || (@c != 0 && @c > 0)
-      
       if @a == @b && @a == @c
         kind = :equilateral
       elsif (@a == @b && @a != @c) || (@b == @c && @a != @b) || (@a == @c && @a != @b)
@@ -17,9 +16,8 @@ class Triangle
         kind = :scalene
       end
       kind
-      
     else
-      
+      raise TriangleError
   end
   
   class TriangleError < StandardError
