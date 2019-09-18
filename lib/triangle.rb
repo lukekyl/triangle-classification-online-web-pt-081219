@@ -22,7 +22,7 @@ class Triangle
   
   class TriangleError < StandardError
     def side_length_error
-      puts "Your triangle must have a positive size on each side."
+      puts "Your triangle must have a positive length on each side."
     end
   end
 end
