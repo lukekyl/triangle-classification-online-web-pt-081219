@@ -12,7 +12,7 @@ class Triangle
     elsif @side1 > @side2
       kind = :isosceles
     elsif @side1 < @side2
-      kind = scalene
+      kind = :scalene
     end
     kind
   end
