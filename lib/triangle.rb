@@ -14,6 +14,7 @@ class Triangle
     elsif 
       
     end
+    kind
   end
   
   class TriangleError < StandardError
