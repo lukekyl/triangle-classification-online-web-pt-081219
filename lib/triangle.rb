@@ -1,17 +1,17 @@
 class Triangle
   attr_accessor :equilateral, :isosceles, :scalene, :side1, :side2, :side3
   
-  def initialize(side1, side2, side3)
-    @side1 = side1
-    @side2 = side2
-    @side3 = side3
+  def initialize(a,b,c)
+    @a = a
+    @b = b
+    @c = c
   end
   def self.kind 
-    if @side1 == @side2 && @side1 == @side3
+    if @a == @b && @a == @c
       kind = :equilateral
-    elsif @side1 > @side2
+    elsif @a1 > @b
       kind = :isosceles
-    elsif @side1 < @side2
+    elsif @side1 < @b
       kind = :scalene
     end
     kind
