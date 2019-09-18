@@ -22,6 +22,7 @@ class Triangle
       rescue TriangleError => error
           puts error.side_length_error
       end
+    end
   end
   
   class TriangleError < StandardError
