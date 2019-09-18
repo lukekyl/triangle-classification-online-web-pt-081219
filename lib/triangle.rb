@@ -1,6 +1,6 @@
 class Triangle
-  attr_accessor :equilateral, :isosceles, :scalene, :a, :b, :c
-  
+  attr_accessor :equilateral, :isosceles, :scalene
+  attr_reader :a, :b, :c
   def initialize(a,b,c)
     @a = a
     @b = b
