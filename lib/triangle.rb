@@ -16,12 +16,14 @@ class Triangle
         kind = :scalene
       end
       kind
-    else
+    elsif (@a + @b !> @c) || (@a + @c !> @b) || (@b + @c !> @a)
       # begin
         raise TriangleError
       # rescue TriangleError => error
       #     puts error.side_length_error
       # end
+    else
+        raise TriangleError
     end
   end
   
