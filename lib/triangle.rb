@@ -8,20 +8,18 @@ class Triangle
   end
   def kind 
     if (@a != 0 && @a > 0) && (@b != 0 && @b > 0) && (@c != 0 && @c > 0)
-      if @a == @b && @a == @c
-        kind = :equilateral
-      elsif (@a == @b && @a != @c) || (@b == @c && @a != @b) || (@a == @c && @a != @b)
-        kind = :isosceles
-      elsif @a != @b && @a != @c
-        kind = :scalene
-      end
-      kind
-    elsif !(@a + @b > @c) || !(@a + @c > @b) || !(@b + @c > @a)
-      # begin
+      if !(@a + @b > @c) || !(@a + @c > @b) || !(@b + @c > @a)
         raise TriangleError
-      # rescue TriangleError => error
-      #     puts error.side_length_error
-      # end
+      else
+        if @a == @b && @a == @c
+          kind = :equilateral
+        elsif (@a == @b && @a != @c) || (@b == @c && @a != @b) || (@a == @c && @a != @b)
+          kind = :isosceles
+        elsif @a != @b && @a != @c
+          kind = :scalene
+        end
+        kind
+      end
     else
         raise TriangleError
     end
