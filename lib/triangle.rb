@@ -17,7 +17,7 @@ class Triangle
       end
       kind
     else
-      raise TriangleError
+      raise TriangleError.side_length_error
   end
   
   class TriangleError < StandardError
